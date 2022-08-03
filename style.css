@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 240px calc(100% - 240px);
+  grid-template-rows: 80px calc(100vh - 80px);
+  grid-template-areas:
+    "aside navbar"
+    "aside main";
+}
+
+.container .navbar {
+  grid-area: navbar;
+  padding: 15px;
+}
+
+.container .navbar .navbar-items {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .navbar .navbar-items .navbar-item_type {
+  font-weight: 700;
+  font-size: 24px;
+  color: #111827;
+}
+
+.container .navbar .navbar-items .navbar-item_text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.container .navbar .navbar-items .navbar-item_more {
+  font-weight: 600;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.container .navbar .navbar-items .navbar-item_more:hover {
+  color: #000;
+}
+
+.container .aside {
+  grid-area: aside;
+  background-color: #f3f4f6;
+}
+
+.container .aside .logo {
+  width: 134px;
+  height: 40px;
+  margin: 15px;
+}
+
+.container .aside .aside-menu {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .aside .aside-menu .aside-menu_items {
+ 
+  display: flex;
+  align-items: center;
+  width: 224px;
+  height: 40px;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 7px;
+  cursor: pointer;
+}
+
+.container .aside .aside-menu .aside-menu_items:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 104px -49px rgba(0,0,0,0.7);
+}
+
+.container .aside .aside-menu .aside-menu_items:hover .title {
+  color: #10b981;
+}
+.container .aside .aside-menu .aside-menu_items:hover .icon {
+  color: #10b981;
+}
+
+.container .aside .aside-menu .aside-menu_items .icon {
+  width: 19px;
+  height: 19px;
+}
+
+.container .aside .aside-menu .aside-menu_items .title {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  padding-left: 7px;
+}
+
+.container .aside .border {
+  width: 80%;
+  height: 1px;
+  background-color: #e5e7eb;
+  display: block;
+  margin: 15px auto;
+}
+
+.container .aside .text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  text-align: center;
+}
+
+.container .aside .aside-app {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 240px;
+}
+
+.container .aside .aside-app .apps {
+ 
+  /* mana shu yerda grid o'rniga flex ishlatdim shunga nima deysiz */
+ 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container .aside .aside-app .apps .aside-install {
+  padding-right: 7px;
+}
+.container .aside .aside-app .aside-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.container .main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 188px);
+  grid-template-rows: repeat(2, 272px);
+  padding-left: 20px;
+  gap: 20px;
+}
+
+.container .main .main-items {
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+
+.container .main .main-items .img {
+  width: 156px;
+  height: 156px;
+}
+
+.container .main .main-items .main-items_context {
+  padding-left: 14px;
+}
+
+.container .main .main-items .main-items_context .main-title {
+  color: #111827;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.container .main .main-items .main-items_context .main-text {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+}
